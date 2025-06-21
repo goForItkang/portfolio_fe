@@ -1,0 +1,18 @@
+#landing-div{
+    width: 100%;   
+    /* border: 1px solid black; */
+    
+    margin: auto;
+    min-width:800px;
+    max-width: 1200px;
+}
+@media (max-width: 748px){
+    #landing-div{
+        min-width: auto; /* ✅ 이거 중요 */
+        width: 100%;
+    }
+}
+.landing_info{
+    border: 1px solid black;
+    margin-top: 34px;
+}

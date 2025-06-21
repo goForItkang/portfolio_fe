@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header className='flex' id='header-container'>
             <div id='logo'>logo</div>
-            <div className='flex'>
+            <div className='flex' id='naviagation-div'>
                 <p>Home</p>
                 <p>About</p>
                 <p>Project</p>

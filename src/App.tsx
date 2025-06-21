@@ -1,6 +1,8 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
 import MainLayout from './layout/MainLayout';
+import Landing from './components/\bLanding';
 
 function App() {
   // const [test,setTest] = useState('');
@@ -13,11 +15,17 @@ function App() {
   // }, []);
   
   return (
-    <>
-    <MainLayout>
-      <h1>out</h1>
-    </MainLayout>
-  </>
+    
+      <BrowserRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Landing />} />
+          {/* 다른 페이지들 예시 */}
+          {/* <Route path="/about" element={<About />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  
   )
 }
 

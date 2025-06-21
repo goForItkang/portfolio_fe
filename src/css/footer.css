@@ -1,0 +1,34 @@
+#footer-container{
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    height: auto;
+    padding-bottom: 60px; /* ✅ 메뉴바 공간 확보 (선택) */
+    min-height: 100px;
+}
+#footer-container> div:first-child{
+    display: flex;
+    margin: auto;
+    height: 100px;
+    justify-content: space-around;
+}
+.footer_info-p{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+}
+#menu-mobie{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  justify-content: space-around;
+}
+@media (max-width: 748px){
+    #menu-mobie{
+        display: flex;
+    }
+}
