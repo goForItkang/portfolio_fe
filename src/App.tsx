@@ -4,6 +4,7 @@ import './App.css'
 import MainLayout from './layout/MainLayout';
 import Landing from './components/\bLanding';
 import Login from './components/Login';
+import PortpolioPage from './pages/portpolioPage';
 
 function App() {
   // const [test,setTest] = useState('');
@@ -24,6 +25,7 @@ function App() {
           {/* 다른 페이지들 예시 */}
           {/* <Route path="/about" element={<About />} /> */}
           <Route path='/login' element={<Login/>}/>
+          <Route path='/portfolio' element={<PortpolioPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
