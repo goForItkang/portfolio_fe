@@ -5,6 +5,7 @@ import MainLayout from './layout/MainLayout';
 import Landing from './components/\bLanding';
 import Login from './components/Login';
 import PortpolioPage from './pages/portpolioPage';
+import TeamPage from './pages/TeamPage';
 
 function App() {
   // const [test,setTest] = useState('');
@@ -26,6 +27,7 @@ function App() {
           {/* <Route path="/about" element={<About />} /> */}
           <Route path='/login' element={<Login/>}/>
           <Route path='/portfolio' element={<PortpolioPage/>}/>
+          <Route path='/team' element={<TeamPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,27 @@
+#teamPage-container{
+    border: 1px solid black;
+    width: 80%;
+    margin: auto;
+}
+#team-categoris{
+    display: flex;
+    justify-content: space-around;
+}
+.team-categori>p{
+    font-size: 25px;
+    text-align: center;
+}
+.team-categori{
+    width: 20%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px;
+}
+.team-categori:hover{
+    background-color: black;
+}
+.team-categori:hover p{
+    color: white;
+    
+}

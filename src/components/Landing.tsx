@@ -23,7 +23,7 @@ const Landing = () => {
                 </div>
             </div>
             <div className='landing_info'>
-                팀원 구하기
+            <Link to="/team">팀원 구하기</Link>
             </div>
             <div className='landing_info'>
                 박람회,전시회
