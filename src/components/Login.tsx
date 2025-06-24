@@ -1,7 +1,8 @@
 import React from 'react';
 import "../css/login.css";
+import axios from 'axios';
 const Login = () => {
-    
+    axios.post("http://localhost:8080/api/login")
     return (
         <div id='login-container'>
             <div>
