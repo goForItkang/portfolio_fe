@@ -1,14 +1,16 @@
-import React, { useRef } from 'react';
-import '@toast-ui/editor/dist/toastui-editor.css';
-import { Editor } from '@toast-ui/react-editor';
+import React, { useRef, useState } from 'react';
+import WriteToast from '../lib/WriteToast';
+import "../../css/teamWrite.css";
 
 const TeamWrite = () => {
   const editorRef = useRef<any>(null);
 
-  const handleSubmit = () => {
-    const content = editorRef.current?.getInstance().getMarkdown();
-    console.log('작성된 내용:', content);
-    // 여기서 서버로 content 전송 가능
+  // ✅ 1. 모집 항목 리스트 상태
+  const [recruitList, setRecruitList] = useState([{ role: '', count: 0 }]);
+
+  // ✅ 2. 항목 추가 함수
+  const addRoleInput = () => {
+    setRecruitList([...recruitList, { role: '', count: 0 }]);
   };
 
   return (
@@ -18,14 +20,29 @@ const TeamWrite = () => {
         <input type="text" placeholder="제목을 입력하세요" className="w-full border px-2 py-1 mb-4" />
       </div>
 
+      {/* 모집 역할/인원 입력 */}
+      {recruitList.map((item, index) => (
+        <div key={index} className='team-select-div'>
+          <select defaultValue={item.role}>
+            <option value="">직무 선택</option>
+            <option value="Back-end">Back-end</option>
+            <option value="Front-end">Front-end</option>
+            <option value="Full-Stack">Full-Stack</option>
+            <option value="PM">PM</option>
+            <option value="Design">Design</option>
+          </select>
+          <input type="number" placeholder="인원 수 입력" defaultValue={item.count} />
+        </div>
+      ))}
+
+      {/* + 버튼 */}
+      <button id="addBtn" onClick={addRoleInput}>+</button>
+
       {/* 에디터 */}
-      <Editor
-    initialValue="hello react editor world!"
-    previewStyle="vertical"
-    height="600px"
-    initialEditType="markdown"
-    useCommandShortcut={true}
-  />
+      <WriteToast/>
+
+      {/* 전송 버튼 */}
+      <button>전송</button>
     </div>
   );
 };
